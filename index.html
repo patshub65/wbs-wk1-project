@@ -4,9 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <style type="text/tailwindcss">
+    @theme {
+        /* Colors */
+        --color-cream: #fdfaf7;
+        --color-tan-light: #ede2d9;
+        --color-dark-brown: #3e221d;
+        --color-gray-brown: #6b5d56;
+        --color-light-gray-brown: #a39185;
+        --color-light-tan: #e3d8d0;
+        /* Fonts */
+        --font-heading: "Poppins", sans-serif;
+        --font-body: "Inter", sans-serif;
+        /* Radius */
+        --radius-base: 0.75rem;
+        --radius-lg-xl: 1.25rem;
+        /* Shadow */
+        --shadow-card: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+    }
+    </style>
     <title>Dwello | Modern Real Estate</title>
 </head>
-<body type="text/tailwindcss"  class="bg-[#F9F4F1] text-[#2D2D2D]">
+<body type="text/tailwindcss" class="bg-cream text-gray-brown font-body">
 <!-- Martin -->
     <header>
         <nav>
@@ -21,10 +43,41 @@
 
 <!-- Patrick -->
 
-        <section id="value-proposition">
-            </section>
+        <section id="value-proposition" class="py-16 px-6">
+            <div class="flex flex-row items-center  gap-8 px-3">
+                <img id="value-proposition-image" src="./assets/realestate.png" alt="Modern home exterior" class="w-full rounded-base shadow-card object-cover max-h-[400px]">
+                <div id="value-proposition-text" class="flex flex-col gap-6">
+                    <h2 class="font-heading font-bold text-dark-brown text-2xl lg:text-4xl">We Help You To Find Your Dream Home</h2>
+                    <p class="text-gray-brown text-base leading-relaxed">From cozy cottages to luxurious estates, our dedicated team guides you through every step of the journey, ensuring your dream home becomes a reality</p>
+                    <div id="stats" class="flex flex-wrap gap-6 md:gap-10">
+                        <div class="stat bg-tan-light rounded-base shadow-card px-6 py-4 min-w-[120px]">
+                            <h3 class="font-heading font-bold text-dark-brown text-2xl">8K+</h3>
+                            <p class="text-gray-brown text-sm mt-1">Properties Sold</p>
+                        </div>
+                        <div class="stat bg-tan-light rounded-base shadow-card px-6 py-4 min-w-[120px]">
+                            <h3 class="font-heading font-bold text-dark-brown text-2xl">2K+</h3>
+                            <p class="text-gray-brown text-sm mt-1">Happy Clients</p>
+                        </div>
+                        <div class="stat bg-tan-light rounded-base shadow-card px-6 py-4 min-w-[120px]">
+                            <h3 class="font-heading font-bold text-dark-brown text-2xl">20+</h3>
+                            <p class="text-gray-brown text-sm mt-1">Years of Experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <section id="usp">
+        <section id="usp class="py-16 px-6">
+            <div class="flex flex-col items-center gap-8 px-3">
+                <div class="flex flex-col items-center gap-2">
+                  <h2 class="font-heading font-bold text-dark-brown text-2xl lg:text-4xl">Why Choose Us</h2>
+                  <p class="text-gray-brown text-base leading-relaxed">Elevating Your Home Buying Experience with Expertise, Integrity, and Unmatched Personalized Service</p>
+                </div>
+                <div class="flex flex-row items-center gap-8">
+                    <div class="flex flex-col text-left gap-2 bg-tan-light rounded-base shadow-card px-6 py-4 max-w-[30%]"><div class="flex flex-row items-center gap-2"><img src="./assets/map pin.svg" alt=""><h4 class="font-heading font-bold text-dark-brown text-2xl">Expert Guidance</h4></div><p>Benefit from our team's seasoned expertise for a smooth buying experience</p></div>
+                    <div class="flex flex-col text-left gap-2 bg-tan-light rounded-base shadow-card px-6 py-4 max-w-[30%]"><div class="flex flex-row items-center gap-2"><img src="./assets/map pin.svg" alt=""><h4 class="font-heading font-bold text-dark-brown text-2xl">Expert Guidance</h4></div><p>Benefit from our team's seasoned expertise for a smooth buying experience</p></div>
+                    <div class="flex flex-col text-left gap-2 bg-tan-light rounded-base shadow-card px-6 py-4 max-w-[30%]"><div class="flex flex-row items-center gap-2"><img src="./assets/map pin.svg" alt=""><h4 class="font-heading font-bold text-dark-brown text-2xl">Expert Guidance</h4></div><p>Benefit from our team's seasoned expertise for a smooth buying experience</p></div>
+                </div>
             </section>
 
 <!-- Martin -->
