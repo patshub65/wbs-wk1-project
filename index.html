@@ -13,9 +13,11 @@
         --color-cream: #fdfaf7;
         --color-tan-light: #ede2d9;
         --color-dark-brown: #3e221d;
+        --color-button-dark: #2B1B12;
         --color-gray-brown: #6b5d56;
         --color-light-gray-brown: #a39185;
         --color-light-tan: #e3d8d0;
+        --color-white: #FFFFFF;
         /* Fonts */
         --font-heading: "Poppins", sans-serif;
         --font-body: "Inter", sans-serif;
@@ -28,18 +30,82 @@
     </style>
     <title>Dwello | Modern Real Estate</title>
 </head>
-<body type="text/tailwindcss" class="bg-cream text-gray-brown font-body">
-<!-- Martin -->
-    <header>
-        <nav>
-            </nav>
-    </header>
+<body class="bg-cream text-gray-brown font-body">
 
+    <!-- Mobile-only header -->
+    <header class="bg-cream px-6 py-4">
+      <nav class="flex items-center justify-between gap-4">
+        <a href="#">
+          <img src="./assets/logo.svg" alt="Dwello" class="h-6">
+        </a>
+  
+        <!-- Mobile-only: keep it simple, no desktop nav yet -->
+        <button class="bg-button-dark text-white px-4 py-2 rounded-lg hover:bg-gray-brown text-sm font-medium">
+          Sign up
+        </button>
+      </nav>
+    </header>
+  
     <main>
-        <section id="hero">
-            <div id="search-filter">
+      <!-- Mobile-only hero (stacked) -->
+      <section id="hero" class="bg-cream px-6 py-8">
+        <div class="flex flex-col gap-6">
+          <!-- Hero Content -->
+          <div class="flex flex-col gap-4">
+            <h1 class="font-heading font-extrabold text-dark-brown text-5xl">
+              Find Your Dream Home
+            </h1>
+  
+            <p class="text-gray-brown text-base leading-relaxed">
+              Explore our curated selection of exquisite properties meticulously tailored to your unique dream home vision
+            </p>
+  
+            <button class="bg-button-dark text-white w-full rounded-lg hover:bg-gray-brown text-sm font-medium py-3">
+              Sign up
+            </button>
+          </div>
+  
+          <!-- Hero Image -->
+          <div>
+            <img
+              src="./assets/hero-house.png"
+              alt="Modern home"
+              class="w-full object-cover max-h-[400px] rounded-base"
+            >
+          </div>
+        </div>
+  
+        <!-- Search Filter Bar (mobile stacked) -->
+        <div id="search-filter" class="bg-tan-light rounded-lg-xl px-4 py-6 -mt-6 relative z-10">
+          <form class="flex flex-col gap-4">
+            <!-- Location -->
+            <div class="flex items-center justify-between bg-cream rounded-lg px-4 py-3">
+              <span class="text-gray-brown text-sm">Location</span>
+              <img src="./assets/location-icon.svg" alt="" class="w-5 h-5">
             </div>
-        </section>
+  
+            <!-- Type -->
+            <div class="flex items-center justify-between bg-cream rounded-lg px-4 py-3">
+              <span class="text-gray-brown text-sm">Type</span>
+              <img src="./assets/home-icon.svg" alt="" class="w-5 h-5">
+            </div>
+  
+            <!-- Price Range -->
+            <div class="flex items-center justify-between bg-cream rounded-lg px-4 py-3">
+              <span class="text-gray-brown text-sm">Price Range</span>
+              <img src="./assets/price-icon.svg" alt="" class="w-5 h-5">
+            </div>
+  
+            <!-- Submit -->
+            <button
+              type="submit"
+              class="bg-button-dark text-white w-full h-12 rounded-lg hover:bg-gray-brown font-medium text-sm"
+            >
+              Sign up
+            </button>
+          </form>
+        </div>
+      </section>
 
 <!-- Patrick -->
 
