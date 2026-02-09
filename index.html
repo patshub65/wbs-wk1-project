@@ -4,27 +4,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <style type="text/tailwindcss">
+    @theme {
+        /* Colors */
+        --color-cream: #fdfaf7;
+        --color-tan-light: #ede2d9;
+        --color-dark-brown: #3e221d;
+        --color-button-dark: #2B1B12;
+        --color-gray-brown: #6b5d56;
+        --color-light-gray-brown: #a39185;
+        --color-light-tan: #e3d8d0;
+        --color-white: #FFFFFF;
+        --color-card-tan: #DDC7BB;
+        --color-star-yellow: #FFC71E;
+        /* Fonts */
+        --font-heading: "Poppins", sans-serif;
+        --font-body: "Inter", sans-serif;
+        /* Radius */
+        --radius-base: 0.75rem;
+        --radius-lg-xl: 1.25rem;
+        /* Shadow */
+        --shadow-card: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+    }
+    </style>
     <title>Dwello | Modern Real Estate</title>
 </head>
-<body type="text/tailwindcss"  class="bg-[#F9F4F1] text-[#2D2D2D]">
-<!-- Martin -->
-    <header>
-        <nav>
-            </nav>
-    </header>
+<body class="bg-cream text-gray-brown font-body">
 
+    <header class="bg-cream px-6 py-4">
+      <nav class="flex items-center justify-between gap-4">
+        <a href="#">
+          <img src="./assets/logo.svg" alt="Dwello" class="h-6">
+        </a>
+  
+        <!-- Mobile-only: keep it simple, no desktop nav yet -->
+        <button class="bg-button-dark text-white px-4 py-2 rounded-lg hover:bg-gray-brown text-sm font-medium">
+          Sign up
+        </button>
+      </nav>
+    </header>
+  
     <main>
-        <section id="hero">
-            <div id="search-filter">
+      <!-- Mobile-only hero (stacked) create hamburger next step -->
+      <section id="hero" class="bg-cream px-6 py-8">
+        <div class="flex flex-col gap-6">
+          <div class="flex flex-col gap-4">
+            <h1 class="font-heading font-extrabold text-dark-brown text-5xl">
+              Find Your Dream Home
+            </h1>
+  
+            <p class="text-gray-brown text-base leading-relaxed">
+              Explore our curated selection of exquisite properties meticulously tailored to your unique dream home vision
+            </p>
+  
+            <button class="bg-button-dark text-white w-full rounded-lg hover:bg-gray-brown text-sm font-medium py-3">
+              Sign up
+            </button>
+          </div>
+  
+          <!-- Hero Image -->
+          <div>
+            <img
+              src="./assets/hero-house.png"
+              alt="Modern home"
+              class="w-full object-cover max-h-96 rounded-base"
+            >
+          </div>
+        </div>
+  
+        <!-- Search Filter Bar (mobile stacked) -->
+        <div id="search-filter" class="bg-tan-light rounded-lg-xl px-4 py-6 -mt-6 relative z-10">
+          <form class="flex flex-col gap-4">
+            <!-- Location -->
+            <div class="flex items-center justify-between bg-cream rounded-lg px-4 py-3">
+              <span class="text-gray-brown text-sm">Location</span>
+              <img src="./assets/location-icon.svg" alt="" class="w-5 h-5">
             </div>
-        </section>
+  
+            <!-- Type -->
+            <div class="flex items-center justify-between bg-cream rounded-lg px-4 py-3">
+              <span class="text-gray-brown text-sm">Type</span>
+              <img src="./assets/home-icon.svg" alt="" class="w-5 h-5">
+            </div>
+  
+            <!-- Price Range -->
+            <div class="flex items-center justify-between bg-cream rounded-lg px-4 py-3">
+              <span class="text-gray-brown text-sm">Price Range</span>
+              <img src="./assets/price-icon.svg" alt="" class="w-5 h-5">
+            </div>
+  
+            <!-- Submit -->
+            <button
+              type="submit"
+              class="bg-button-dark text-white w-full h-12 rounded-lg hover:bg-gray-brown font-medium text-sm"
+            >
+              Sign up
+            </button>
+          </form>
+        </div>
+      </section>
 
 <!-- Patrick -->
 
-        <section id="value-proposition">
-            </section>
+        <section id="value-proposition" class="py-16 px-6">
+            <div class="flex flex-row items-center  gap-8 px-3">
+                <img id="value-proposition-image" src="./assets/realestate.png" alt="Modern home exterior" class="w-full rounded-base shadow-card object-cover max-h-[400px]">
+                <div id="value-proposition-text" class="flex flex-col gap-6">
+                    <h2 class="font-heading font-bold text-dark-brown text-2xl lg:text-4xl">We Help You To Find Your Dream Home</h2>
+                    <p class="text-gray-brown text-base leading-relaxed">From cozy cottages to luxurious estates, our dedicated team guides you through every step of the journey, ensuring your dream home becomes a reality</p>
+                    <div id="stats" class="flex flex-wrap gap-6 md:gap-10">
+                        <div class="stat bg-tan-light rounded-base shadow-card px-6 py-4 min-w-[120px]">
+                            <h3 class="font-heading font-bold text-dark-brown text-2xl">8K+</h3>
+                            <p class="text-gray-brown text-sm mt-1">Properties Sold</p>
+                        </div>
+                        <div class="stat bg-tan-light rounded-base shadow-card px-6 py-4 min-w-[120px]">
+                            <h3 class="font-heading font-bold text-dark-brown text-2xl">2K+</h3>
+                            <p class="text-gray-brown text-sm mt-1">Happy Clients</p>
+                        </div>
+                        <div class="stat bg-tan-light rounded-base shadow-card px-6 py-4 min-w-[120px]">
+                            <h3 class="font-heading font-bold text-dark-brown text-2xl">20+</h3>
+                            <p class="text-gray-brown text-sm mt-1">Years of Experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <section id="usp">
+        <section id="usp class=" class="py-16 px-6">
+            <div class="flex flex-col items-center gap-8 px-3">
+                <div class="flex flex-col items-center gap-2 w-md">
+                  <h2 class="font-heading font-bold text-dark-brown text-2xl lg:text-4xl">Why Choose Us</h2>
+                  <p class="text-gray-brown text-base text-center leading-relaxed">Elevating Your Home Buying Experience with Expertise, Integrity, and Unmatched Personalized Service</p>
+                </div>
+                <div class="flex flex-row items-center gap-8">
+                    <div class="flex flex-col text-left gap-3 bg-tan-light rounded-base shadow-card px-6 py-6">
+                        <div class="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-dark-brown/10">
+                        <img src="./assets/map pin.svg" alt=""></div>
+                        <h4 class="font-heading font-medium text-dark-brown text-2xl">Expert Guidance</h4>
+                        <p>Benefit from our team's seasoned expertise for a smooth buying experience</p>
+                        </div>
+                    <div class="inline-flex flex-col text-left gap-3 bg-tan-light rounded-base shadow-card px-6 py-6">
+                        <div class="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-dark-brown/10">
+                            <img src="./assets/map pin.svg" alt=""></div>
+                        <h4 class="font-heading font-medium text-dark-brown text-2xl">Expert Guidance</h4>
+                        <p>Benefit from our team's seasoned expertise for a smooth buying experience</p>
+                    </div>
+                    <div class="flex flex-col text-left gap-3 bg-tan-light rounded-base shadow-card px-6 py-6">
+                        <div class="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-dark-brown/10">
+                            <img src="./assets/map pin.svg" alt=""></div>
+                        <h4 class="font-heading font-medium text-dark-brown text-2xl">Expert Guidance</h4>
+                        <p>Benefit from our team's seasoned expertise for a smooth buying experience</p>
+                    </div>
+                </div>
             </section>
 
 <!-- Martin -->
@@ -32,17 +166,133 @@
     <section id="residences">
             </section>
 
-        <section id="testimonials">
-            </section>
+        <!-- Martin: Agentic workflow test — Claude Code built this section
+             without proper Figma specs (tried pasting SVG paths from Figma).
+             Used Playwright MCP for browser preview. Result does not match
+             the original design. Claude also handled the full git/GitHub
+             workflow (branch, commit, push) to test agentic capabilities.
+             Lesson: AI needs proper design specs to produce accurate output. -->
+        <section id="testimonials" class="py-16 px-6">
+            <div class="flex flex-col items-center gap-8">
+                <h2 class="font-heading font-bold text-dark-brown text-2xl lg:text-4xl text-center">What People Say About Dwello</h2>
+
+                <div class="flex flex-col gap-6 w-full">
+
+                    <!-- Card 1: Sarah Nguyen -->
+                    <div class="bg-card-tan rounded-lg-xl overflow-hidden shadow-card">
+                        <img src="https://picsum.photos/seed/dwello-sarah/400/180" alt="Modern living room" class="w-full h-44 object-cover">
+                        <div class="p-5 flex flex-col gap-3">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h3 class="font-heading font-bold text-button-dark text-lg">Sarah Nguyen</h3>
+                                    <p class="text-gray-brown text-sm">San Francisco</p>
+                                </div>
+                                <div class="bg-white rounded-base px-3 py-1 flex items-center gap-1">
+                                    <span class="text-star-yellow text-sm">&#9733;</span>
+                                    <span class="text-button-dark text-sm font-medium">5.0</span>
+                                </div>
+                            </div>
+                            <p class="text-gray-brown text-sm leading-relaxed">Dwello truly cares about their clients. The team guided us through every step and found us the perfect home in just two weeks.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Michael Rodriguez -->
+                    <div class="bg-card-tan rounded-lg-xl overflow-hidden shadow-card">
+                        <img src="https://picsum.photos/seed/dwello-michael/400/180" alt="Stylish kitchen interior" class="w-full h-44 object-cover">
+                        <div class="p-5 flex flex-col gap-3">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h3 class="font-heading font-bold text-button-dark text-lg">Michael Rodriguez</h3>
+                                    <p class="text-gray-brown text-sm">San Diego</p>
+                                </div>
+                                <div class="bg-white rounded-base px-3 py-1 flex items-center gap-1">
+                                    <span class="text-star-yellow text-sm">&#9733;</span>
+                                    <span class="text-button-dark text-sm font-medium">5.0</span>
+                                </div>
+                            </div>
+                            <p class="text-gray-brown text-sm leading-relaxed">From our first consultation to closing day, the experience was seamless. Their local expertise made all the difference.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Emily Johnson -->
+                    <div class="bg-card-tan rounded-lg-xl overflow-hidden shadow-card">
+                        <img src="https://picsum.photos/seed/dwello-emily/400/180" alt="Cozy bedroom with natural light" class="w-full h-44 object-cover">
+                        <div class="p-5 flex flex-col gap-3">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h3 class="font-heading font-bold text-button-dark text-lg">Emily Johnson</h3>
+                                    <p class="text-gray-brown text-sm">Los Angeles</p>
+                                </div>
+                                <div class="bg-white rounded-base px-3 py-1 flex items-center gap-1">
+                                    <span class="text-star-yellow text-sm">&#9733;</span>
+                                    <span class="text-button-dark text-sm font-medium">5.0</span>
+                                </div>
+                            </div>
+                            <p class="text-gray-brown text-sm leading-relaxed">The attention to detail and personalized service exceeded all our expectations. We couldn't be happier with our new home.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Pagination dots (decorative) -->
+                <div class="flex gap-2">
+                    <span class="w-3 h-3 rounded-full bg-button-dark"></span>
+                    <span class="w-3 h-3 rounded-full bg-light-gray-brown"></span>
+                </div>
+            </div>
+        </section>
 
 <!-- Patrick -->
 
         <section id="cta">
+            <div class="flex flex-col items-center gap-8 px-3 py-16">
+                <div class="flex flex-col items-center justify-center gap-2 w-md">
+                  <h2 class="font-heading text-center font-bold text-dark-brown text-2xl lg:text-4xl">Do You Have Any Questions? Get Help From Us</h2>
+                </div>
+                <div class="flex flex-col gap-6">
+                    <div class="flex flex-row items-center gap-8 px-3">
+                        <div class="inline-flex gap-4 flex-row items-center">
+                            <img width="30px" src="./assets/map pin.svg" alt="">
+                            <p>Chat live with our support team</p>
+                        </div>
+                        <div class="inline-flex gap-4 flex-row items-center">
+                            <img width="30px" src="./assets/map pin.svg" alt="">
+                            <p>Browse our FAQ</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-row gap-2 justify-center ">
+                <div class="flex flex-row rounded-md items-center bg-tan-light gap-4 px-4 py-3">
+                    <span class="inline-fle items-center justify-center w-5 h-5">
+                        <img src="./assets/map pin.svg" alt="email icon" class="w-5 h-5">
+                    </span>
+                    <input 
+                    type="email"
+                    placeholder="Enter your email address..."
+                    class="w-full bg-transparent outline-none text-gray-brown placeholder:text-light-gray-brown text-sm" />
+                </div>
+                <button class="px-6 py-3 rounded-md bg-dark-brown text-cream font-medium text-sm shadow-card hover:bg-dark-brown/90 transition">
+                    Submit
+                </button>
+            </div>
+        </div>
+                </div>
             </section>
 
     </main>
 
-    <footer>
+    <footer class="bg-light-tan text-dark-brown mt-16">
+        <div class="max-w-6xl mx-auto px-6 py-12">
+            <div class="flex flex-col gap-10">
+                <div class="max-w-xs space-y-4">
+                    <div class="font-heading font-bold text-2xl">
+                        Dwello
+                    </div>
+                    <p class="text-gray-brown text-sm leading-relaxed">
+                        Bringing you closer to your dream home, one click at a time.
+                    </p>
+                </div>
+            </div>
+        </div>
         </footer>
 
     </body>

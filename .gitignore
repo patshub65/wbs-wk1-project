@@ -1,0 +1,13 @@
+# Local context file (not for team)
+PROJECT.md
+
+# Dependencies
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
